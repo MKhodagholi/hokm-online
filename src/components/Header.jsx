@@ -14,6 +14,12 @@ const Header = () => {
         <li>
           <Link to="/login">ورود</Link>
         </li>
+        <li>
+          <Link to="/about-us">درباره ما</Link>
+        </li>
+        <li>
+          <Link to="/contact-us">تماس با ما</Link>
+        </li>
       </ul>
     </HeaderStyled>
   );

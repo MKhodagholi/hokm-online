@@ -7,8 +7,8 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
-    primary: "#d01515",
-    secondary: "#3e171c",
+    primary: "#1b1b1b",
+    secondary: "#e6da69",
   },
   fonts: {
     Lalezar: "Lalezar",

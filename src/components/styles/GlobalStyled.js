@@ -8,6 +8,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   @font-face {
     font-family: "Lalezar";
-    src: url("../../asset/Fonts/Lalezar-Reqular.ttf") format("ttf");
+    src: url("../../asset/Fonts/Lalezar-Regular.ttf");
   }
 `;
