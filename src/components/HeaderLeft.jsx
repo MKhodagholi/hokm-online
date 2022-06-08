@@ -2,11 +2,11 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { HeaderStyled } from "./styles/HeaderStyled";
+import { HeaderLeftStyled } from "./styles/HeaderLeft";
 
-const Header = () => {
+const HeaderLeft = () => {
   return (
-    <HeaderStyled>
+    <HeaderLeftStyled>
       <ul>
         <li>
           <Link to="/register">ثبت نام</Link>
@@ -21,8 +21,8 @@ const Header = () => {
           <Link to="/contact-us">تماس با ما</Link>
         </li>
       </ul>
-    </HeaderStyled>
+    </HeaderLeftStyled>
   );
 };
 
-export default Header;
+export default HeaderLeft;

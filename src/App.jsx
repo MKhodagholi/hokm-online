@@ -1,9 +1,10 @@
 import React from "react";
 
-import Header from "./components/Header";
+import HeaderLeft from "./components/HeaderLeft";
 import { GlobalStyles } from "./components/styles/GlobalStyled";
 import AppStyled from "./components/styles/AppStyled";
 import { ThemeProvider } from "styled-components";
+import CircleCards from "./components/CircleCards";
 
 const theme = {
   colors: {
@@ -21,6 +22,7 @@ const App = () => {
       <AppStyled>
         <GlobalStyles />
         <Header />
+        <CircleCards />
       </AppStyled>
     </ThemeProvider>
   );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderStyled = styled.header`
+export const HeaderLeftStyled = styled.header`
   ul {
     list-style-type: none;
     display: flex;
@@ -9,7 +9,9 @@ export const HeaderStyled = styled.header`
     align-items: center;
     position: fixed;
     left: 50px;
-    top: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
     li {
       margin-bottom: 20px;
     }
@@ -27,6 +29,7 @@ export const HeaderStyled = styled.header`
       box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 1);
       border: 1px solid ${({ theme }) => theme.colors.primary};
       transition: all 0.5s ease;
+      user-select: none;
       &:hover {
         color: ${({ theme }) => theme.colors.secondary};
         background-color: ${({ theme }) => theme.colors.primary};
