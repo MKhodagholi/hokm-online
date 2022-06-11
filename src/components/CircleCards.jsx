@@ -8,11 +8,11 @@ const CircleCards = () => {
   return (
     <CircleCardsStyled>
       <CardListStyled>
-        <Card rotateDegree={-15} height={400} width={300} />
-        <Card rotateDegree={5} height={400} width={300} />
-        <Card rotateDegree={15} height={400} width={300} />
-        <Card rotateDegree={25} height={400} width={300} />
-        <p>سلطان حکم</p>
+        <Card rotateDegree={-15} height={400} width={300} type="gish" />
+        <Card rotateDegree={-5} height={400} width={300} type="pic" />
+        <Card rotateDegree={5} height={400} width={300} type="khesht" />
+        <Card rotateDegree={15} height={400} width={300} type="heart" />
+        <p>سلطان کارت</p>
       </CardListStyled>
     </CircleCardsStyled>
   );
