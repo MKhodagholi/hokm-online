@@ -16,30 +16,33 @@ export const CircleCardsStyled = styled.div`
 export const CardListStyled = styled.div`
   display: flex;
   margin-top: 25px;
-  margin-left: 80px;
+  margin-left: 100px;
   div {
     position: absolute;
     &:nth-child(1) {
       margin-left: 0;
     }
     &:nth-child(2) {
-      margin-left: 30px;
+      margin-left: 40px;
     }
     &:nth-child(3) {
-      margin-left: 60px;
+      margin-left: 80px;
     }
     &:nth-child(4) {
-      margin-left: 90px;
+      margin-left: 120px;
     }
-  }
-  p {
-    position: fixed;
-    left: 50%;
-    bottom: 50px;
-    transform: translateX(-50%);
-    color: ${({ theme }) => theme.colors.secondary};
-    font-size: 3rem;
-    font-family: "Lalezar";
+    &:nth-child(4):hover {
+      transform: rotate(15deg) !important;
+    }
+    p {
+      position: fixed;
+      left: 50%;
+      bottom: 50px;
+      transform: translateX(-50%);
+      color: ${({ theme }) => theme.colors.secondary};
+      font-size: 3rem;
+      font-family: "Lalezar";
+    }
   }
 `;
 
