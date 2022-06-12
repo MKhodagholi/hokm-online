@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import CircleCards from "./components/CircleCards";
 import HeaderLeft from "./components/HeaderLeft";
 import HeaderRight from "./components/HeaderRight";
+import MenuMobile from "./components/MenuMobile";
 
 const theme = {
   colors: {
@@ -24,8 +25,9 @@ const App = () => {
       <AppStyled>
         <GlobalStyles />
         <HeaderRight />
-        <HeaderLeft />
         <CircleCards />
+        <HeaderLeft />
+        <MenuMobile />
       </AppStyled>
     </ThemeProvider>
   );
