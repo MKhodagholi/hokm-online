@@ -14,6 +14,12 @@ const CardStyled = styled.div`
   img {
     width: 100%;
     height: 100%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
   &:hover {
     transform: rotate(${({ rotateDegree }) => -Math.abs(rotateDegree) - 5}deg)
@@ -26,7 +32,7 @@ const CardStyled = styled.div`
     z-index: 5;
     &:hover {
       transform: rotate(${({ rotateDegree }) => -Math.abs(rotateDegree) - 5}deg)
-        translateX(-100px) !important;
+        translateX(-80px) !important;
       box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.8);
     }
   }
