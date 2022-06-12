@@ -11,6 +11,10 @@ export const CircleCardsStyled = styled.div`
   top: 50%;
   border: 1px solid #fff;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: 1000px) {
+    width: 400px;
+    height: 400px;
+  }
 `;
 
 export const CardListStyled = styled.div`
@@ -34,14 +38,21 @@ export const CardListStyled = styled.div`
     &:nth-child(4):hover {
       transform: rotate(15deg) !important;
     }
+  }
+  p {
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: 3rem;
+    font-family: "Lalezar";
+    transition: 0.5s;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-left: 60px;
     p {
-      position: fixed;
-      left: 50%;
-      bottom: 50px;
-      transform: translateX(-50%);
-      color: ${({ theme }) => theme.colors.secondary};
-      font-size: 3rem;
-      font-family: "Lalezar";
+      font-size: 2rem;
     }
   }
 `;

@@ -37,4 +37,7 @@ export const HeaderLeftStyled = styled.header`
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
