@@ -12,8 +12,8 @@ export const CircleCardsStyled = styled.div`
   border: 1px solid #fff;
   transform: translate(-50%, -50%);
   @media screen and (max-width: 1000px) {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
 `;
 
@@ -50,7 +50,7 @@ export const CardListStyled = styled.div`
     transition: 0.5s;
   }
   @media screen and (max-width: 1000px) {
-    margin-left: 60px;
+    margin-left: 50px;
     p {
       font-size: 2rem;
     }

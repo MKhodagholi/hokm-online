@@ -12,32 +12,32 @@ const CircleCards = () => {
           rotateDegree={-15}
           lHeight={400}
           lWidth={300}
-          sHeight={250}
-          sWidth={187.5}
+          sHeight={200}
+          sWidth={150}
           type="gish"
         />
         <Card
           rotateDegree={-5}
           lHeight={400}
           lWidth={300}
-          sHeight={250}
-          sWidth={187.5}
+          sHeight={200}
+          sWidth={150}
           type="khesht"
         />
         <Card
           rotateDegree={5}
           lHeight={400}
           lWidth={300}
-          sHeight={250}
-          sWidth={187.5}
+          sHeight={200}
+          sWidth={150}
           type="pic"
         />
         <Card
           rotateDegree={15}
           lHeight={400}
           lWidth={300}
-          sHeight={250}
-          sWidth={187.5}
+          sHeight={200}
+          sWidth={150}
           type="heart"
         />
         <p>سلطان کارت</p>

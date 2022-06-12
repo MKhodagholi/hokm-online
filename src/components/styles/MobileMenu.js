@@ -20,7 +20,7 @@ const MobileMenuStyled = styled.div`
         display: inline-block;
         text-decoration: none;
         color: ${({ theme }) => theme.colors.primary};
-        font-size: 2rem;
+        font-size: 1.25rem;
         padding: 1rem 2rem;
         transition: all 0.5s ease;
         &:hover {
