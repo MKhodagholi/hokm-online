@@ -2,19 +2,27 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import MobileMenuStyled from "./styles/MobileMenu";
+import { VscAccount } from "react-icons/vsc";
+import { AiFillAppstore, AiTwotoneShop } from "react-icons/ai";
 
 const MenuMobile = () => {
   return (
     <MobileMenuStyled>
       <ul>
         <li>
-          <Link>تنظیمات</Link>
+          <Link to="/profile">
+            <VscAccount />
+          </Link>
         </li>
         <li className="active">
-          <Link>بازی</Link>
+          <Link to="/battle">
+            <AiFillAppstore />
+          </Link>
         </li>
         <li>
-          <Link>شاپ</Link>
+          <Link to="/shop">
+            <AiTwotoneShop />
+          </Link>
         </li>
       </ul>
     </MobileMenuStyled>
