@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import BattleImg from "../../../asset/img/battleImg.jpeg";
-
 const ArenaStyled = styled.div`
   height: 320px;
   width: 280px;
