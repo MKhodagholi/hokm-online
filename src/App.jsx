@@ -1,18 +1,18 @@
 import React from "react";
 
-import { GlobalStyles } from "./components/styles/GlobalStyled";
-import AppStyled from "./components/styles/AppStyled";
 import { ThemeProvider } from "styled-components";
-import CircleCards from "./components/CircleCards";
-import HeaderLeft from "./components/HeaderLeft";
-import HeaderRight from "./components/HeaderRight";
-import MenuMobile from "./components/MenuMobile";
+import { Route, Routes } from "react-router-dom";
+import AppStyled from "./components/styles/AppStyled";
+import { GlobalStyles } from "./components/styles/GlobalStyled";
+import Welcome from "./pages/Welcome";
+import Battle from "./pages/Battle";
 
 const theme = {
   colors: {
     primary: "#1b1b1b",
     secondary: "#e6da69",
     redColor: "#fb1206",
+    darkBlueColor: "#0d4594",
   },
   fonts: {
     Lalezar: "Lalezar",
@@ -24,10 +24,10 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <AppStyled>
         <GlobalStyles />
-        <HeaderRight />
-        <CircleCards />
-        <HeaderLeft />
-        <MenuMobile />
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/battle" element={<Battle />} />
+        </Routes>
       </AppStyled>
     </ThemeProvider>
   );
