@@ -4,13 +4,10 @@ export const useAudio = (url) => {
   const [audio] = useState(new Audio(url));
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const toggle = () => setIsPlaying((prev) => !prev);
+
   useEffect(() => {
     isPlaying ? audio.play() : audio.pause();
-    if (!isPlaying) {
-      setTimeout(() => {
-        setIsPlaying(true);
-      }, [1000]);
-    }
   }, [isPlaying]);
 
   useEffect(() => {
@@ -20,5 +17,5 @@ export const useAudio = (url) => {
     };
   });
 
-  return [isPlaying, setIsPlaying, audio];
+  return [isPlaying, toggle, audio];
 };
