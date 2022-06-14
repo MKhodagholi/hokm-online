@@ -6,6 +6,7 @@ import AppStyled from "./components/styles/AppStyled";
 import { GlobalStyles } from "./components/styles/GlobalStyled";
 import Welcome from "./pages/Welcome";
 import Battle from "./pages/Battle";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 const theme = {
   colors: {
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <AppStyled>
+        <MusicPlayer />
         <GlobalStyles />
         <Routes>
           <Route path="/" element={<Welcome />} />
