@@ -7,6 +7,7 @@ const MobileMenuStyled = styled.div`
     position: fixed;
     bottom: 0;
     width: 100%;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
     border-top: 1px solid black;
@@ -37,9 +38,6 @@ const MobileMenuStyled = styled.div`
     li.active {
       /* background-color: #f0f8ff; */
     }
-  }
-  @media screen and (min-width: 800px) {
-    display: none;
   }
 `;
 
