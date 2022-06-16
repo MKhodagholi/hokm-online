@@ -4,9 +4,9 @@ import { ThemeProvider } from "styled-components";
 import { Route, Routes } from "react-router-dom";
 import AppStyled from "./components/styles/AppStyled";
 import { GlobalStyles } from "./components/styles/GlobalStyled";
-import Welcome from "./pages/Welcome";
-import Battle from "./pages/Battle";
+import Battle from "./pages/Battle/Battle";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import MenuMobile from "./components/MenuMobile";
 
 const theme = {
   colors: {
@@ -21,15 +21,16 @@ const theme = {
 };
 
 const App = () => {
+  const isAuthenticate = true;
   return (
     <ThemeProvider theme={theme}>
       <AppStyled>
         <MusicPlayer />
         <GlobalStyles />
         <Routes>
-          <Route path="/" element={<Welcome />} />
           <Route path="/battle" element={<Battle />} />
         </Routes>
+        {isAuthenticate && <MenuMobile />}
       </AppStyled>
     </ThemeProvider>
   );
