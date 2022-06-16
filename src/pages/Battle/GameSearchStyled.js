@@ -3,7 +3,6 @@ import styled from "styled-components";
 const GameSearchStyled = styled.div`
   width: 50%;
   margin: auto;
-  margin-top: 20vh;
   direction: rtl;
   width: 210px;
   .arena {

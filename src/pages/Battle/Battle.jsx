@@ -4,9 +4,17 @@ import GameSearchStyled from "./GameSearchStyled";
 
 import arenaImg from "../../asset/img/battleImg.jpeg";
 
+import InformationStyled from "./InformationStyled";
+import { GiCardBurn } from "react-icons/gi";
+
 const Battle = () => {
   return (
     <BattleStyled>
+      <InformationStyled>
+        <div className="score-card">
+          <GiCardBurn /> ۳
+        </div>
+      </InformationStyled>
       <GameSearchStyled>
         <div className="arena">
           <img src={arenaImg} />

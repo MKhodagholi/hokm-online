@@ -25,7 +25,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <AppStyled>
-        <MusicPlayer />
+        {/* <MusicPlayer /> */}
         <GlobalStyles />
         <Routes>
           <Route path="/battle" element={<Battle />} />
