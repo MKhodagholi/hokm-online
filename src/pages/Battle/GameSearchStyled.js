@@ -14,20 +14,47 @@ const GameSearchStyled = styled.div`
     overflow: hidden;
     margin-bottom: 2rem;
     position: relative;
-    cursor: pointer;
+    box-shadow: 0 0 4px 4px #000;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    p {
+    &-information {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      text-align: center;
       position: absolute;
       left: 0;
-      background: #000;
       bottom: 0;
+      user-select: none;
       color: #fff;
       font-family: "Lalezar";
-      padding: 0.25rem 0.5rem;
+      padding: 0.5rem;
+      p {
+        cursor: pointer;
+      }
+      span {
+        color: ${({ theme }) => theme.colors.secondary};
+        font-size: 1.25rem;
+        display: flex;
+        align-items: flex-start;
+        svg {
+          font-size: 1.5rem;
+          margin-right: 5px;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 25%;
+      background: linear-gradient(0, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     }
   }
   .options {

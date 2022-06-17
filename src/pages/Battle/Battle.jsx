@@ -18,7 +18,12 @@ const Battle = () => {
       <GameSearchStyled>
         <div className="arena">
           <img src={arenaImg} />
-          <p>آرنای شماره ۱</p>
+          <div className="arena-information">
+            <p>آرنای شماره ۱</p>
+            <span>
+              ۱۵۰ <GiCardBurn />
+            </span>
+          </div>
         </div>
         <div className="options">
           <button>تک نفره</button>
