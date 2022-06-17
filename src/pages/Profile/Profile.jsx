@@ -2,8 +2,7 @@ import React from "react";
 import ProfileStyled from "./ProfileStyled";
 
 import UserInformationStyled from "./UserInformationStyled";
-import { AiOutlineUser } from "react-icons/ai";
-import { GiHeartKey } from "react-icons/gi";
+import { AiOutlineUser, AiOutlinePhone, AiOutlineKey } from "react-icons/ai";
 import { MdOutlineMail } from "react-icons/md";
 
 const Profile = () => {
@@ -19,7 +18,7 @@ const Profile = () => {
           <div className="user-informaion__go">{">"}</div>
         </div>
         <div className="user-information user-password">
-          <GiHeartKey className="user-password__icon" />
+          <AiOutlineKey className="user-password__icon" />
           <div className="title-description">
             <label>پسورد </label>
             <span>آخرین تغییر ۲ سال پیش</span>
@@ -35,7 +34,7 @@ const Profile = () => {
           <div className="user-informaion__go">{">"}</div>
         </div>
         <div className="user-information user-phone">
-          <MdOutlineMail className="user-phone__icon" />
+          <AiOutlinePhone className="user-phone__icon" />
           <div className="title-description">
             <label>موبایل </label>
             <span dir="ltr">+۹۸ ۹۹۰ ۹۲۱ ۹۸۳۵ </span>
