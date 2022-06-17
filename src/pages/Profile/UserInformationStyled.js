@@ -13,7 +13,7 @@ const UserInformationStyled = styled.div`
   .user-information {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding-top: 1rem;
     font-size: 1.5rem;
     width: 100%;
     svg {
@@ -37,6 +37,9 @@ const UserInformationStyled = styled.div`
       position: absolute;
       left: 30px;
       color: ${({ theme }) => theme.colors.grayColor};
+    }
+    &:last-child {
+      padding-bottom: 1rem;
     }
   }
 `;
