@@ -7,6 +7,7 @@ import { GlobalStyles } from "./components/styles/GlobalStyled";
 import Battle from "./pages/Battle/Battle";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import MenuMobile from "./components/MenuMobile";
+import Shop from "./pages/Shop/Shop";
 
 const theme = {
   colors: {
@@ -29,6 +30,7 @@ const App = () => {
         <GlobalStyles />
         <Routes>
           <Route path="/battle" element={<Battle />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
         {isAuthenticate && <MenuMobile />}
       </AppStyled>
