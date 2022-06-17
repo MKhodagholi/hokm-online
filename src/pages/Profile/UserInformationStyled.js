@@ -14,14 +14,14 @@ const UserInformationStyled = styled.div`
     display: flex;
     align-items: center;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 100%;
     svg {
       margin: 0 1rem;
       margin-left: 0;
       margin-left: 10px;
       padding: 0.5rem;
-      font-size: 3rem;
+      font-size: 2.25rem;
       border: 2px solid ${({ theme }) => theme.colors.primary};
       border-radius: 50%;
     }
@@ -29,7 +29,7 @@ const UserInformationStyled = styled.div`
       display: flex;
       flex-direction: column;
       span {
-        font-size: 1rem;
+        font-size: 0.5rem;
         color: ${({ theme }) => theme.colors.grayColor};
       }
     }
