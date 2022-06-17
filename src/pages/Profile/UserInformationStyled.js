@@ -13,15 +13,15 @@ const UserInformationStyled = styled.div`
   .user-information {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    font-size: 2rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
     width: 100%;
     svg {
       margin: 0 1rem;
       margin-left: 0;
       margin-left: 10px;
       padding: 0.5rem;
-      font-size: 3rem;
+      font-size: 2.5rem;
       border: 2px solid ${({ theme }) => theme.colors.primary};
       border-radius: 50%;
     }
@@ -29,7 +29,7 @@ const UserInformationStyled = styled.div`
       display: flex;
       flex-direction: column;
       span {
-        font-size: 1rem;
+        font-size: 0.75rem;
         color: ${({ theme }) => theme.colors.grayColor};
       }
     }
@@ -37,6 +37,10 @@ const UserInformationStyled = styled.div`
       position: absolute;
       left: 30px;
       color: ${({ theme }) => theme.colors.grayColor};
+      cursor: pointer;
+    }
+    &:last-child {
+      padding-bottom: 1rem;
     }
   }
 `;
