@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { ThemeProvider } from "styled-components";
 import { Route, Routes } from "react-router-dom";
@@ -8,7 +8,10 @@ import Battle from "./pages/Battle/Battle";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import MenuMobile from "./components/MenuMobile";
 import Shop from "./pages/Shop/Shop";
-import Profile from "./pages/Profile/Profile";
+import ProfilePage from "./pages/Profile/ProfilePage";
+import Login from "./components/Login/Login";
+import axios from "axios";
+import Profile from "./components/Profile/Profile";
 
 const theme = {
   colors: {
@@ -25,18 +28,58 @@ const theme = {
 };
 
 const App = () => {
-  const isAuthenticate = true;
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://hokm-8cbcc-default-rtdb.firebaseio.com/users.json")
+      .then(({ data }) => {
+        for (const key in data) {
+          const newUsers = [];
+          const user = {
+            username: data[key].username,
+            password: data[key].password,
+          };
+          newUsers.push(user);
+          setUsers(newUsers);
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const loginHandler = (username, password) => {
+    users.map((user) => {
+      if (user.username === username && user.password === password) {
+        setUser({ username, password });
+        setIsAuthenticated(true);
+      }
+    });
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <AppStyled>
         {/* <MusicPlayer /> */}
         <GlobalStyles />
         <Routes>
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/battle" element={<Battle />} />
           <Route path="/shop" element={<Shop />} />
+          <Route
+            path="/"
+            element={
+              !isAuthenticated ? (
+                <Login loginHandler={loginHandler} />
+              ) : (
+                <Profile username={user.username} />
+              )
+            }
+          />
         </Routes>
-        {isAuthenticate && <MenuMobile />}
+        {isAuthenticated && <MenuMobile />}
       </AppStyled>
     </ThemeProvider>
   );
