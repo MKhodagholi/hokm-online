@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProfileStyled = styled.div`
+const ProfilePageStyled = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -53,4 +53,4 @@ const ProfileStyled = styled.div`
   }
 `;
 
-export default ProfileStyled;
+export default ProfilePageStyled;

@@ -1,14 +1,14 @@
 import React from "react";
-import ProfileStyled from "./ProfileStyled";
+import ProfilePageStyled from "./ProfilePageStyled";
 
 import { AiOutlineUser, AiOutlinePhone, AiOutlineKey } from "react-icons/ai";
 import { MdOutlineMail, MdOutlinePrivacyTip } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
 import { IoHelpOutline } from "react-icons/io5";
 
-const Profile = () => {
+const ProfilePage = () => {
   return (
-    <ProfileStyled>
+    <ProfilePageStyled>
       <div className="options user">
         <div className="option user-name">
           <AiOutlineUser className="user-name__icon" />
@@ -66,8 +66,8 @@ const Profile = () => {
           <div className="option-go">{">"}</div>
         </div>
       </div>
-    </ProfileStyled>
+    </ProfilePageStyled>
   );
 };
 
-export default Profile;
+export default ProfilePage;
